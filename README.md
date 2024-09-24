@@ -16,7 +16,8 @@ You can click the Preview link to take a look at your changes.
 - 👀 Sono interessato a condividere un po' del codice che giorno a giorno cerco di migliorare
 - 🌱 Al momento sto imparando javascript, flexbox, snippets, bash
 - 💞️ Vorrei collaborare a creare un e-commerce
-- 📫 Come contattarmi ...
+- 📫 Come contattarmi:
+    https://code-shake.github.io/Code-Shake/
 - 😄 Pronomi: ...
 - ⚡ Curiosità: ...
 
