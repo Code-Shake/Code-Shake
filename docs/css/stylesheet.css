@@ -1,0 +1,163 @@
+@charset "utf-8";
+/* ENCABEZADO CSS Document */
+
+/*
+################################################################################
+###################  reset  ###################
+################################################################################
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+
+/* dos valores: 'vertical' 'orizontal' */
+/* cuatro valores: sigue el sentido del reloj: */
+
+*, 
+*::before, 
+*::after {
+  transition: all .28s ease-in-out;
+}
+
+#mainav form * {
+  transition:none !important;
+}
+
+
+/*
+################################################################################
+###################  select  ###################
+################################################################################
+*/
+
+body {  }   /* tag */
+.class {  } /* clase */
+#id {  }    /* id */
+
+
+
+/*
+################################################################################
+###############################::::: import :::::###############################
+################################################################################
+*/
+
+@import url("viewport/global.css");
+@import url("../fonts.css");
+
+/*
+################################################################################
+####################################  text  ####################################
+################################################################################
+*/
+
+/* @group decoration */
+/*
+################################################################################
+#################################  decoration  #################################
+################################################################################
+*/
+.decoration {
+  /* background-color */
+  background-color: transparent;
+  
+  background-image: url('background.png'); /* se pueden agregar mas valores con "," */
+  
+  background-image: linear-gradient(to bottom, white 0%, black 100%);
+  background-image: linear-gradient(to );
+
+  background-image: radial-gradient(ellipse farthest-corner, white 0%, black 100%);
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  /* background-position */
+  background-position: 8px 5px;
+  background-position: center center;
+  background-position-x: 10px;
+  background-position-y: 1px;
+
+  /* shadow */
+  box-shadow: 0 0 1px #000; /* none, h-offset v-offset blur spread color, inset, initial, inherit */
+  box-shadow: inset 10px 10px 10px -5px #000; /* sample inset */
+  box-shadow: 0px 0px 1px #000, 5px 5px 0px red; /* se pueden agregar mas valores con "," */
+  /* border */
+  border:1px solid red; /* width style color */
+  border-width: 1px;
+  border-style: solid; /* dotted,dashed,solid,double,groove,ridge,inset,outset,none,hidden */
+  border-color: #aa4e4e;
+  border-radius: 10%;
+  border-right-style: double;
+  border-right-color: #aa4e4e;
+  /* OTHER */
+  opacity: 0.71;
+  cursor: pointer;
+  
+}
+/* @end decoration */
+
+/*
+################################################################################
+###################################  layout  ###################################
+################################################################################
+*/
+.layout {
+
+  width: 1px; /* px, %, vw, */
+  max-width: ;
+  height: 1px; /* px, %, vh, */
+  max-height: ;
+  
+  margin: auto;
+  padding: 1px;
+  
+  position: absolute; /* absolute, fixed, relative, static, sticky, inherit*/
+  top: 1px;
+  right: 1px;
+  left: 1px;
+  bottom: 1px;
+  
+  display: flex; /*none, block, inline, inline-block, inline-table, list-item*/
+
+  float: right; /* right, left */
+  clear: both;
+  
+  visibility: visible; /* collapse, hidden, visible, inherit */
+  overflow: hidden; /* inherit, visible, scroll, auto, hidden */
+  z-index: 1;
+}
+
+/*
+################################################################################
+###################  algunos atributos para Efectos en CSS   ###################
+################################################################################
+*/
+.atributos{
+  border-radius:10px;
+  
+  box-shadow: 10px 10px 21px rgba(202, 49, 49, 0.56);
+  -moz-box-shadow: 10px 10px 21px rgba(202, 49, 49, 0.56);
+
+  text-shadow: 10px 10px 1px rgba(136, 100, 100, 0.68);
+  
+  -webkit-filter: blur(32px); /* moz, ms */
+  filter: blur(32px);
+  filter: brightness(25);
+  filter: invert(100%);
+  filter: contrast(1000%) saturate(1000%);
+  
+  -webkit-transform: translateX(100%); /* moz, ms */
+  transform: translateX(100%);
+  transform: translateY(100%);
+  transform: translateZ(100%);
+
+  transform: scale(1);
+  transform: scale(2) rotate(35deg);
+}
