@@ -1,58 +1,186 @@
 <!DOCTYPE html>
-
-<!-- https://youtu.be/TWiy3dGSmgk?si=_94AruPQY7UKx3HC -->
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- CSS -->
-
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800');
-
-
-*,
- *::before,
- *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  zborder: 0.1px solid;
-}
-
-</style>
-
-<!-- BOXICONS CSS -->
-
-<style>
-    
-</style>
-
+<!-- ----------------------------------------------------------------------- -->
+<!--            https://youtu.be/TWiy3dGSmgk?si=_94AruPQY7UKx3HC             -->
+<!-- ----------------------------------------------------------------------- -->
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Navigation Menu Bar</title>
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      <link href='https://unpkg.com/boxicons@2.1.4/dist/boxicons.js' rel='stylesheet'>
+ <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
-</head>
-<body>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <nav>
-        <div class="nav-bar">
-            <span class="logo"><a href="">CodingLab</a></span>
+    <!-- --------------------------------------------------------- -->
+    <!-- -------------------------- CSS -------------------------- -->
+    <!-- --------------------------------------------------------- -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800");
+      @import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+      
+  /*
+  <!-- variabili -->
+  */    
+      :root {
+        --body-color: #E4E9F7;
+        --nav-color: #4070F4;
+        --side-nav: #010718;
+        --text-color: #FFF;
+        --search-bar: #F2F2F2;
+        --search-text: #010718;
+      }
+
+  /*
+  <!-- globali -->
+  */
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        zborder: 0.1px solid;
+      }
             
-            <div class="menu">
-                <ul>
-                    <li> <a href="">home</a> </li>
-                    <li> <a href="">home</a> </li>
-                    <li> <a href="">home</a> </li>
-                    <li> <a href="">home</a> </li>
-                    <li> <a href="">home</a> </li>
-                </ul>
-                
-            </div>
+      body {
+        height:100vh;
+        background-color:var(--body-color);
+      }
+      
+      /*
+      <!-- ----------------------------------------------------------------------- -->
+      <!--                              nav-bar                               -->
+      <!-- ----------------------------------------------------------------------- -->
+      */
+      
+      nav {
+        position:fixed;
+        top:0;
+        left:0;
+        height:70px;
+        width:100%;
+        background-color:var(--nav-color);
+      }
+      
+      nav .nav-bar{
+        position: relative;
+        height:100%;
+        max-width:1000px;
+        width:100%;
+        background-color:var(--nav-color);
+        margin: 0 auto;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+      }
+      
+      /* ------------------- */
+      /*         logo        */
+      /* ------------------- */
+      
+      nav .nav-bar .logo a{
+        font-size:25px;
+        font-weight:500;
+        color:var(--text-color);
+        text-decoration:none;
+      }
+      
+
+      /* ------------------- */
+      /*        links        */
+      /* ------------------- */
+      
+      .nav-bar .nav-links{
+        display: flex;
+        align-items: center;
+      }
+      
+      .nav-bar .nav-links li{
+        margin: 0 5px;
+        list-style:none;
+      }
+      
+      .nav-links li a{
+        position:relative;
+        font-size:17px;
+        font-weight: 500;
+        color: var(--text-color);
+        text-decoration:none;
+        padding:10px;
+      }
+      
+      .nav-links li a::before{
+        content:'';
+        position:absolute;
+        left:50%;
+        bottom:0;
+        transform: translateX(-50%);
+        height:6px;
+        width:6px;
+        border-radius:50%;
+        background-color:var(--text-color);
+        opacity:0;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-links li:hover a::before{
+      opacity:1;
+      }
+      
+      
+      /*
+      <!-- ----------------------------------------------------------------------- -->
+      <!--                              BOXICONS CSS                               -->
+      <!-- ----------------------------------------------------------------------- -->
+      */
+
+      
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <!-- ------------------------------------------------------ -->
+      <!-- ------------------- inizio nav-bar ------------------- -->
+      <!-- ------------------------------------------------------ -->
+      <div class="nav-bar">
+        <span class="logo"><a href="">CodingLab</a></span>
+
+        <div class="menu">
+          <!-- <ul class="nav-links">
+            <li><a href="">home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Contact</a></li>
+          </ul> -->
         </div>
         
+          
+        
+        <div class="darkLight-searchBox">
+          <div class="dark-light">
+          
+            <i class='bx bx-moon'></i> <!-- https://boxicons.com/?query=moon -->
+            <i class='bx bx-sun'></i>
+            <i class='bx bx-user'></i>
+            <i class='bx bxs-user'></i>
+            <i class='bx bxl-facebook-square'></i>
+            <i class='bx bx-hot'></i>
+            <i class='bx bxs-hot'></i>
+            <i class='bx bxl-facebook-square'></i>
+             
+          </div>
+        </div>
+        <!-- https://youtu.be/TWiy3dGSmgk?si=Km-ObMakRAJ8tt7E&t=655 -->
+      </div>
+      <!-- ------------------------------------------------------ -->
+      <!-- -------------------- fine nav-bar -------------------- -->
+      <!-- ------------------------------------------------------ -->
     </nav>
-
-</body>
+  </body>
 </html>

@@ -2,5 +2,14 @@
     "workbench.startupEditor": "none",
     "remoteHub.commitDirectlyWarning": "off",
     "explorer.confirmDragAndDrop": false,
-    "editor.fontSize": 16
+    "editor.fontSize": 16,
+    "liveServer.settings.https": {
+        "enable": true
+    },
+    "liveServer.settings.proxy": {
+        "baseUri": "/docs/",
+        "enable": true
+    },
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+    "liveServer.settings.ChromeDebuggingAttachment": false
 }
